@@ -1,8 +1,6 @@
-
-
 module.exports = {
-    title: 'Indie Hacker Ride Along', 
-    description: 'Watch Indie Hackers Build a Business Step by Step',
+    title: 'Ride With Me', 
+    description: 'Ride Along with Indie Hackers as they Build a Business Step by Step',
     theme: 'cool',
     markdown: {
         // options for markdown-it-anchor

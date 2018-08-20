@@ -1,7 +1,9 @@
 <template>
 <div class="container">
-    <h1>Rides in Progress</h1>
-    <sui-grid :columns="3" stackable>
+    <div class="ride-header">
+        <h1>Rides in Progress</h1>
+    </div>
+    <sui-grid :columns="4" stackable>
         <sui-grid-row v-for="(row, i) in rows" :key="i">
             <sui-grid-column v-for="(col, j) in cols" :key="i">
                 <RideCard
@@ -57,5 +59,10 @@ export default {
 .container {
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+.ride-header {
+    border-bottom: 3px solid #3eaf7c;
+    margin-bottom: 2rem;
+    color: #222;
 }
 </style>
