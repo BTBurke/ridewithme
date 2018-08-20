@@ -35,7 +35,7 @@
             <h2>Learn what works (and what doesn't)</h2>
         </div>
         <div class="feature-text">
-            We document everything we do, in gory detail, so you don't make the same mistakes
+            We document everything we do in gory detail, so you don't make the same mistakes
         </div>
       </sui-grid-column>
     </sui-grid-row>
