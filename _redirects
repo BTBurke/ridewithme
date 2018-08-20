@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://quirky-allen-d6bd28.netlify.com/* http://ridewithme.io/:splat 301!
