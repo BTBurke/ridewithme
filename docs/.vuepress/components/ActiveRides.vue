@@ -1,11 +1,11 @@
 <template>
 <div class="container">
-    <div class="ride-header">
+    <div id="rides" class="ride-header">
         <h1>Rides in Progress</h1>
     </div>
     <sui-grid :columns="4" stackable>
         <sui-grid-row v-for="(row, i) in rows" :key="i">
-            <sui-grid-column v-for="(col, j) in cols" :key="i">
+            <sui-grid-column v-for="(col, j) in cols" :key="j">
                 <RideCard
                     v-bind:name="rides[i*3+j].name"
                     v-bind:avatarsrc="rides[i*3+j].avatarsrc"

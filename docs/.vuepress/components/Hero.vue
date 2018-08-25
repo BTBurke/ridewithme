@@ -37,7 +37,7 @@ export default {
     order: 1;
 }
 .callout {
-    background: #222;
+    background: #14507A;
     font-size: 1.2rem;
     color: #fff;
     min-height: 400px;
