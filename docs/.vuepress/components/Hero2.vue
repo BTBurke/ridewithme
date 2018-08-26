@@ -33,10 +33,15 @@ export default {
     display: inline-block;
 }
 .container-hero .photo {
-    background: no-repeat center/200% url("/hero.jpg");
+    background: no-repeat center/200% url("/hero@1X.jpg");
     display: block;
     min-height: 400px;
     width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .container-hero .photo {
+        background: no-repeat center/200% url("/hero@2X.jpg");
+    }
 }
 .container-hero .callout {
     position: absolute;

@@ -5,14 +5,14 @@
     </div>
     <sui-grid :columns="4" stackable>
         <sui-grid-row v-for="(row, i) in rows" :key="i">
-            <sui-grid-column v-for="(col, j) in cols" :key="j">
+            <sui-grid-column v-for="(col, j) in cols(i)" :key="j">
                 <RideCard
-                    v-bind:name="rides[i*3+j].name"
-                    v-bind:avatarsrc="rides[i*3+j].avatarsrc"
-                    v-bind:logosrc="rides[i*3+j].logosrc"
-                    v-bind:description="rides[i*3+j].description"
-                    v-bind:cta="rides[i*3+j].cta"
-                    v-bind:link="rides[i*3+j].link"
+                    v-bind:name="rides[i*4+j].name"
+                    v-bind:avatarsrc="rides[i*4+j].avatarsrc"
+                    v-bind:logosrc="rides[i*4+j].logosrc"
+                    v-bind:description="rides[i*4+j].description"
+                    v-bind:cta="rides[i*4+j].cta"
+                    v-bind:link="rides[i*4+j].link"
                 ></RideCard>
             </sui-grid-column>
         </sui-grid-row>
@@ -22,32 +22,30 @@
 
 <script>
 import RideCard from './RideCard.vue';
+import axios from 'axios';
 
 export default {
     data() {
         return {
-            rides: [
-                {
-                    name: 'Bryan Burke', 
-                    avatarsrc: 'btburke.jpg', 
-                    logosrc: 'secretbox.png',
-                    description: 'Ride along as Bryan builds secretbox.io to help developers securely manage their secrets.',
-                    cta: 'Ride Along',
-                    link: 'secretbox/'
-                },
-                {
-                    name: 'You', 
-                    avatarsrc: 'https://placeimg.com/320/320/people', 
-                    logosrc: 'https://placeimg.com/900/600/tech',
-                    description: 'Are you building something cool?  Share your story with others to document your journey.',
-                    cta: 'Add Your Story',
-                    link: 'contributing.html'
-                }
-            ],
-            rows: 1,
-            cols: 2
-
+            rides: null
         }
+    },
+    computed: {
+        rows() {
+            return this.rides ? this.rides.length % 4 - 1 : 0;
+        },
+    },
+    methods: {
+        cols(row) {
+            return this.rides ? Math.min(4, this.rides.length - row*4) : 0;
+        },
+    },
+    created() {
+        axios.get("/rides.json").then(function(response){
+            this.rides = response.data;
+        }.bind(this)).catch(function(error) {
+            console.log(error);
+        });
     },
     components: {
         RideCard

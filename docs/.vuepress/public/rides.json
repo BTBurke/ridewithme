@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Bryan Burke", 
+        "avatarsrc": "btburke.jpg", 
+        "logosrc": "secretbox.png",
+        "description": "Ride along as Bryan builds secretbox.io to help developers securely manage their secrets.",
+        "cta": "Ride Along",
+        "link": "secretbox/"
+    },
+    {
+        "name": "You", 
+        "avatarsrc": "https://placeimg.com/320/320/people", 
+        "logosrc": "https://placeimg.com/900/600/tech",
+        "description": "Are you building something cool?  Share your story with others to document your journey.",
+        "cta": "Add Your Story",
+        "link": "contributing.html"
+    }
+]
