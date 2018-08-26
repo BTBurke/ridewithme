@@ -1,0 +1,50 @@
+[secretbox]
+# directory underneath docs/ in which you'll publish your posts (required)
+namespace = "secretbox"
+[secretbox.card]
+# Short description that will appear on the card on the homepage under rides in progress (required)
+description = "Ride along as Bryan builds secretbox.io to help developers securely manage their secrets."
+# Link to the directory where your README.md serves as the landing page for your story (defaults to <namespace>/)
+link = ""
+[secretbox.author]
+# Author's name (required)
+name = "Bryan Burke"
+# URL to avatar relative to the .vuepress/public directory or absolute URL, if null a random image is displayed
+avatarsrc ="btburke.jpg"
+# Short personal bio (required only if using the <About> component)
+bio = "Avid builder. Hockey fanatic. Has a great job, but still enjoys the challenge of building side businesses."
+# Email (optional)
+email = "bryan@secretbox.io"
+# Twitter handle (optional)
+twitter = "@bryanburke"
+# Github username (optional)
+github = "BTBurke"
+# Gitlab username (optional)
+gitlab = ""
+[secretbox.project]
+# URL to project logo relative to the .vuepress/public directory or absolute URL, if null a random image is displayed 
+logosrc ="secretbox.png"
+# Longer description of your project (required only if using the <About> component)
+description = "this is a test description."
+# Github URL to project (optional)
+github = ""
+# Gitlab URL to project (optional)
+gitlab = ""
+# Landing page URL (optional)
+homepage = ""
+
+#################################
+#################################
+# Add yourself above this point #
+#################################
+#################################
+[add]
+[add.author]
+name = "You" 
+avatarsrc = "https://placeimg.com/320/320/people"
+[add.project] 
+logosrc = "https://placeimg.com/900/600/tech"
+[add.card]
+description = "Are you building something cool?  Share your story with others to document your journey."
+cta = "Add Your Story"
+link = "contributing.html"

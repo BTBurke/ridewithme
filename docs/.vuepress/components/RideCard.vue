@@ -14,7 +14,7 @@
       <sui-card-content class='btn-small'>
         {{ description }}
         <div>
-        <a :href="link"><sui-button>{{ cta }}</sui-button></a>
+        <a :href="link ? link : namespace + '/'"><sui-button>{{ cta ? cta : "Ride Along" }}</sui-button></a>
         </div>
       </sui-card-content>
     </sui-card>
@@ -29,7 +29,7 @@ Vue.use(SuiVue);
 
 export default {
   name: 'RideCard',
-  props: ['name', 'logosrc', 'avatarsrc', 'description', 'cta', 'link']
+  props: ['name', 'logosrc', 'avatarsrc', 'description', 'cta', 'link', 'namespace']
 };
 </script>
 

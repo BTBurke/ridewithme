@@ -1,6 +1,7 @@
 ---
 sidebar: auto
 ---
+<About project="secretbox" />
 
 # Validating the idea
 
