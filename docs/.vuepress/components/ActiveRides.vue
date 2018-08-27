@@ -1,9 +1,9 @@
 <template>
-<ClientOnly>
 <div class="container">
     <div id="rides" class="ride-header">
         <h1>Rides in Progress</h1>
     </div>
+    <ClientOnly>
     <sui-grid :columns="4" stackable>
         <sui-grid-row v-for="(row, i) in rows" :key="i">
             <sui-grid-column v-for="(col, j) in cols(i)" :key="j">
@@ -19,8 +19,8 @@
             </sui-grid-column>
         </sui-grid-row>
     </sui-grid>
+    </ClientOnly>
 </div>
-</ClientOnly>
 </template>
 
 <script>
