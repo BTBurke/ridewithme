@@ -43,7 +43,7 @@ export default {
             return this.rides ? Math.min(4, this.rides.length - row*4) : 0;
         },
     },
-    created() {
+    mounted() {
         axios.get("/rides.toml").then(function(response){
             this.rides = values(toml.parse(response.data));
         }.bind(this)).catch(function(error) {
