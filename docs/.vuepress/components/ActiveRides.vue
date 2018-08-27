@@ -1,4 +1,5 @@
 <template>
+<ClientOnly>
 <div class="container">
     <div id="rides" class="ride-header">
         <h1>Rides in Progress</h1>
@@ -19,6 +20,7 @@
         </sui-grid-row>
     </sui-grid>
 </div>
+</ClientOnly>
 </template>
 
 <script>
@@ -51,7 +53,8 @@ export default {
         });
     },
     components: {
-        RideCard
+        RideCard,
+        ClientOnly
     }
 }
 </script>
