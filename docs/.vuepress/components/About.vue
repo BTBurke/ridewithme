@@ -58,7 +58,7 @@ export default {
             data: null
         }
     },
-    created() {
+    mounted() {
         axios.get("/rides.toml").then(function(response){
             this.data = prop(this.project, toml.parse(response.data));
             console.log("data", this.data);
