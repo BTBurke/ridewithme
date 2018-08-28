@@ -3,7 +3,6 @@
     <div id="rides" class="ride-header">
         <h1>Rides in Progress</h1>
     </div>
-    <ClientOnly>
     <sui-grid :columns="4" stackable>
         <sui-grid-row v-for="(row, i) in rows" :key="i">
             <sui-grid-column v-for="(col, j) in cols(i)" :key="j">
@@ -19,20 +18,19 @@
             </sui-grid-column>
         </sui-grid-row>
     </sui-grid>
-    </ClientOnly>
 </div>
 </template>
 
 <script>
 import RideCard from './RideCard.vue';
-import axios from 'axios';
-import toml from 'toml';
 import { values } from 'ramda';
+import data from '../public/data.js';
 
 export default {
     data() {
+        console.log("data", data);
         return {
-            rides: null
+            rides: values(data)
         }
     },
     computed: {
@@ -45,16 +43,8 @@ export default {
             return this.rides ? Math.min(4, this.rides.length - row*4) : 0;
         },
     },
-    mounted() {
-        axios.get("/rides.toml").then(function(response){
-            this.rides = values(toml.parse(response.data));
-        }.bind(this)).catch(function(error) {
-            console.log(error);
-        });
-    },
     components: {
-        RideCard,
-        ClientOnly
+        RideCard
     }
 }
 </script>

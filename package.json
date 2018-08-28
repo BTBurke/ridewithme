@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "axios": "^0.18.0",
     "ramda": "^0.25.0",
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-vue": "^0.3.3",

@@ -11,7 +11,7 @@
                     :src="'/' + data.author.avatarsrc"
                     shape="circular"
                     size="tiny"
-                    wrapped=true
+                    wrapped
                     />
                 </div>
                 <div class="bio">
@@ -28,7 +28,7 @@
                   <sui-image
                     :src="'/' + data.project.logosrc"
                     size="tiny"
-                    wrapped=true
+                    wrapped
                     />
               </div>
               <div class="bio">
@@ -42,11 +42,10 @@
 
 <script>
 import Vue from 'vue';
-import toml from 'toml';
-import axios from 'axios';
 import SuiVue from 'semantic-ui-vue';
 import { prop } from 'ramda';
 import 'semantic-ui-css/semantic.min.css';
+import data from '../public/data.js';
 
 Vue.use(SuiVue);
 
@@ -55,16 +54,8 @@ export default {
     props: ['project'],
     data() {
         return {
-            data: null
+            data: prop(this.project, data)
         }
-    },
-    mounted() {
-        axios.get("/rides.toml").then(function(response){
-            this.data = prop(this.project, toml.parse(response.data));
-            console.log("data", this.data);
-        }.bind(this)).catch(function(error) {
-            console.log(error);
-        });
     }
 }
 </script>
