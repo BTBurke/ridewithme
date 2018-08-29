@@ -24,7 +24,7 @@
 <script>
 import RideCard from './RideCard.vue';
 import { values } from 'ramda';
-import data from '../public/data.js';
+import data from '../data.js';
 
 export default {
     data() {

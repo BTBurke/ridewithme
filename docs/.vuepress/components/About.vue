@@ -45,7 +45,7 @@ import Vue from 'vue';
 import SuiVue from 'semantic-ui-vue';
 import { prop } from 'ramda';
 import 'semantic-ui-css/semantic.min.css';
-import data from '../public/data.js';
+import data from '../data.js';
 
 Vue.use(SuiVue);
 
