@@ -1,4 +1,4 @@
-# Finding the right business for you
+# Finding the Right Business for You
 
 One of the biggest mistakes I've made in past projects is not thinking enough early on about what type of business I want to start.  This time around I am going to introduce a framework to evaluate each of my ideas.  Without some way of gauging which ideas are actionable, you run the risk of biting off more than you can chew or undertaking a project for which you have neither the skills, capital, or time to pull off.  This is less about deciding which ideas are good or bad - that is a validation exercise whose answer is ultimately decided by your target market.  Rather, this is about evaluating the resources at your disposal and picking ideas that fit both your available time/capital/knowledge and meet your definition of success.
 
@@ -48,3 +48,6 @@ And my promise to those who want to follow along:
 
 * This is an open platform that is not just about my journey, but your's too.  If you are starting a project and want to offer a ride along to others, feel free to [contribute](/contributing.html).  I have no plans to monetize this site.  This is purely an exercise in giving back to the community and sharing our progress in a completely open and honest way.
 
+
+
+<About project="secretbox" />

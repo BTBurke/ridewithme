@@ -3,7 +3,7 @@
     <div id="rides" class="ride-header">
         <h1>Rides in Progress</h1>
     </div>
-    <sui-grid :columns="4" stackable>
+    <sui-grid :columns="4" stackable class="grid">
         <sui-grid-row v-for="(row, i) in rows" :key="i">
             <sui-grid-column v-for="(col, j) in cols(i)" :key="j">
                 <RideCard
@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style scoped>
+.grid {
+    align-items: stretch;
+}
 .container {
     margin-top: 3rem;
     margin-bottom: 3rem;
