@@ -46,7 +46,7 @@ module.exports = {
     ///////////////////////////////////
     add: {
         card: {
-            description: "Are you building something cool?  Share your story with others to document your journey.",
+            description: "Building something cool?  Share your story with others to document your journey.",
             cta: "Add Your Story",
             link: "contributing.html"
         },
