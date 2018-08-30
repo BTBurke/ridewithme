@@ -1,6 +1,6 @@
 <template>
 <div>
-    <Hero2 />
+    <Hero />
     <div is="sui-container">
         <Features />
         <ActiveRides/>
